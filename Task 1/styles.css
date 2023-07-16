@@ -1,0 +1,26 @@
+/* styles.css */
+
+/* Inline Style */
+h1 {
+    text-align: center;
+  }
+  
+  /* Internal Styles */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  input[type="submit"] {
+    background-color: darkred;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+  }
+  
