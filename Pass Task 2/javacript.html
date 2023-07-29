@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript</title>
+</head>
+<body>
+    <h1>JavaScript Concepts </h1>
+
+    <script>
+
+        // String methods
+        const str = 'Karanveer!';
+        console.log('String methods Implementation:');
+        console.log('1. Length:', str.length);
+        console.log('2. Uppercase:', str.toUpperCase());
+        console.log('3. Lowercase:', str.toLowerCase());
+        console.log('4. Includes:', str.includes('aran'));
+        console.log('5. Substring:', str.substring(0, 4));
+
+        // b. Number methods
+        const num = 69.12;
+        console.log('\n Number methods Implementation:');
+        console.log('1. 2 decimals points :', num.toFixed(2));
+        console.log('2. Exponential :', num.toExponential());
+        console.log('3. Extract integer part:', Math.floor(num));
+        console.log('4. NaN ?:', isNaN(num));
+        console.log('5. Absolute value:', Math.abs(-num));
+
+        // c. Array methods 
+        const arr = ['Josh', 'Katie', 'Belle', 1, 2, 3];
+        console.log('\n Array methods Implementation :');
+        console.log('1. Join:', arr.join(', '));  // join on ','
+        console.log('2. Index of "katie":', arr.indexOf('katie'));
+        console.log('3. Last index of 3:', arr.lastIndexOf(2));
+        console.log('4. Pop:', arr.pop(), arr);
+        console.log('5. Push:', arr.push('Arun'), arr);
+        
+
+        // d. Date methods Implementation
+        const now = new Date();
+        console.log('\n Date methods Implementation :');
+        console.log('1. Current date:', now.toDateString());
+        console.log('2. Current time:', now.toTimeString());
+        console.log('3. ISO string:', now.toISOString());
+        console.log('4. Day of the week:', now.getDay());
+        console.log('5. Month:', now.getMonth() + 1); // Months are idexed from zero 
+        
+
+        // Function Methods Implementation
+        function welcome(name) {
+            return 'Welcome to the game , ' + name + '!';
+        }
+
+        console.log('\n Function methods Implementation :');
+        console.log('1. Function name:', welcome.name);
+        console.log('2. Function length (number of parameters):', welcome.length);
+
+
+        function myFunction(p1, p2) {
+            return p1 * p2;}
+
+        console.log('\n 10*9 :',myFunction(10,9));
+
+    </script>
+</body>
+</html>
