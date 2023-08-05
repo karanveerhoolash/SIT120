@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Credit Task 1</title>
+  <script src="https://unpkg.com/vue@3.2.8/dist/vue.global.js"></script>   <!-- Importing Vue.js -->
+
+</head>
+<body>
+  <div id="app">
+    <!-- Implementing Conditional Rendering -->
+    <div>
+      <h2>Conditional Rendering Implementation:</h2>
+
+      <button @click="showMessage = !showMessage">Change Message</button>  <!-- This is to alternate between rendering options -->
+
+      <p v-if="showMessage">Rendered using v-if</p>
+      <p v-else>Rendered using v-else</p>
+
+      <p v-show="showMessage">Rendered using v-show</p>
+
+      <!-- Unordered list of items using which we are going to extract each item -->
+
+      <ul>
+        <li v-for="item in items_list" :key="item.id">{{ item.name }}</li>
+      </ul>
+
+      <ul>
+        <li v-for="item in filtered_" :key="item.id">{{ item.name }}</li>
+      </ul>
+    </div>
+
+    <!-- Form Input Handling Implementation -->
+    <div>
+      <h2>Form Input Handling:</h2>
+      <input type="text" v-model="inputValue" />
+      <p>User Input: {{ inputValue }}</p>
+    </div>
+  </div>
+
+  <script>
+    const app = Vue.createApp({
+      data() {
+        return {
+          showMessage: true,
+          items_list: [
+            { id: 1, name: 'Car 1' },
+            { id: 2, name: 'Car 2' },
+            { id: 3, name: 'Car 3' },
+          ],
+          inputValue: '',
+        };
+      },
+      computed: {
+        filtered_() {
+          return this.items_list.filter(item => item.name.toLowerCase().includes(this.inputValue.toLowerCase()));
+        }
+      }
+    });
+
+    app.mount('#app');
+  </script>
+</body>
+</html>
