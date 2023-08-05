@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo App</title>
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+  <div id="app" class="container">
+
+    <h2>Todo App - Productivity App For Students</h2>
+
+    <input type="text" v-model="newtask" class="todo-input" @keyup.enter="addTodo" placeholder="Add a new task">
+    <div v-for="(todo, index) in tasks" :key="index" class="todo-item">
+      <span>{{ todo }}</span>
+      <span class="delete-btn" @click="deleteTodo(index)">Done?</span>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/vue@3.2.8/dist/vue.global.js"></script>
+
+  <script>
+    const app = Vue.createApp({
+      data() {
+        return {
+          newtask: '',
+          tasks: [],
+        };
+      },
+      methods: {
+        addTodo() {
+          if (this.newtask.trim() !== '') {
+            this.tasks.push(this.newtask.trim());
+            this.newtask = '';
+          }
+        },
+        deleteTodo(index) {
+          this.tasks.splice(index, 1);
+        },
+      },
+    });
+
+    app.mount('#app');
+  </script>
+</body>
+</html>
