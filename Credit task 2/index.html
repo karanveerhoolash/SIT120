@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentTrack</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>StudentTrack : Achieve your goals!</h1>
+    </header>
+    <main>
+        <section id="dashboard">
+            <!-- Goal Setting-->
+            <div id="goal-form">
+                <h2>Create your New Goal</h2>
+                <label for="goal-title">What is it about?</label>
+                <input type="text" id="goal-title">
+                <label for="goal-description">Talk abt how achieveing it is going to help you:</label>
+                <textarea id="goal-description"></textarea>
+                <label for="goal-category">Category:</label>
+                <select id="goal-category">
+                    <option value="fitness">Fitness</option>
+                    <option value="learning">Learning</option>
+                    <option value="career">Career</option>
+                </select>
+                <label for="goal-target-date">Target Date [be realistic with yourself]:</label>
+                <input type="date" id="goal-target-date">
+                <button id="create-goal-btn">Create Goal</button>
+            </div>
+
+            <!-- Progress Tracking  -->
+            <div id="progress-section">
+                <h2>Track Your Progress</h2>
+                <label for="progress-value">Progress:</label>
+                <input type="number" id="progress-value">
+                <button id="log-progress-btn">Log Progress</button>
+            </div>
+
+            <!-- Reminder Setting Section -->
+            <div id="reminder-section">
+                <h2>Set Reminders</h2>
+                <label for="reminder-text">Reminder Text:</label>
+                <input type="text" id="reminder-text">
+                <label for="reminder-date">Reminder Date:</label>
+                <input type="date" id="reminder-date">
+                <button id="set-reminder-btn">Set Reminder</button>
+            </div>
+
+            <!-- Achievement Badges  -->
+            <div id="achievement-section">
+                <h2>Achievement Badges</h2>
+                <ul id="badges">
+                    <!-- Badges will be displayed here -->
+                </ul>
+            </div>
+
+            <!-- Completed Goals -->
+            <div id="completed-goals-section">
+                <h2>Completed Goals</h2>
+                <ul id="completed-goals">
+                    <!-- Completed goals will be displayed here -->
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; T2 2023 StudentTrack</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.2.0/dist/vue.global.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
